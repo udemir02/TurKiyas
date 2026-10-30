@@ -1,0 +1,28 @@
+test_base_price_alone_can_disqualify_unknown_total (test_tour_compare.ComparisonTests.test_base_price_alone_can_disqualify_unknown_total) ... ok
+test_budget_includes_mandatory_extras (test_tour_compare.ComparisonTests.test_budget_includes_mandatory_extras) ... ok
+test_catalogue_rejects_evidence_not_found_in_description (test_tour_compare.ComparisonTests.test_catalogue_rejects_evidence_not_found_in_description) ... ok
+test_evidence_references_and_missing_information_are_visible (test_tour_compare.ComparisonTests.test_evidence_references_and_missing_information_are_visible) ... ok
+test_exact_budget_boundary_is_allowed (test_tour_compare.ComparisonTests.test_exact_budget_boundary_is_allowed) ... ok
+test_explicit_constraint_removal (test_tour_compare.ComparisonTests.test_explicit_constraint_removal) ... ok
+test_explicit_selection_retains_excluded_option (test_tour_compare.ComparisonTests.test_explicit_selection_retains_excluded_option) ... ok
+test_false_requirement_removes_restriction (test_tour_compare.ComparisonTests.test_false_requirement_removes_restriction) ... ok
+test_followup_retains_ids_budget_and_earlier_conditions (test_tour_compare.ComparisonTests.test_followup_retains_ids_budget_and_earlier_conditions) ... ok
+test_four_options_and_unknown_ids_are_rejected_before_model_call (test_tour_compare.ComparisonTests.test_four_options_and_unknown_ids_are_rejected_before_model_call) ... ok
+test_impossible_constraints_return_no_matches (test_tour_compare.ComparisonTests.test_impossible_constraints_return_no_matches) ... ok
+test_intent_rejects_invented_ids_and_bool_as_integer (test_tour_compare.ComparisonTests.test_intent_rejects_invented_ids_and_bool_as_integer) ... ok
+test_malformed_or_truncated_model_output_is_rejected (test_tour_compare.ComparisonTests.test_malformed_or_truncated_model_output_is_rejected) ... ok
+test_network_error_is_explicit_and_does_not_use_baseline (test_tour_compare.ComparisonTests.test_network_error_is_explicit_and_does_not_use_baseline) ... ok
+test_new_destination_clears_previous_selection (test_tour_compare.ComparisonTests.test_new_destination_clears_previous_selection) ... ok
+test_normalisation_supports_turkish_cities (test_tour_compare.ComparisonTests.test_normalisation_supports_turkish_cities) ... ok
+test_once_list_and_source_exit_without_model (test_tour_compare.ComparisonTests.test_once_list_and_source_exit_without_model) ... ok
+test_order_of_input_options_does_not_change_comparison (test_tour_compare.ComparisonTests.test_order_of_input_options_does_not_change_comparison) ... ok
+test_rules_mode_is_explicit_and_works_without_network (test_tour_compare.ComparisonTests.test_rules_mode_is_explicit_and_works_without_network) ... ok
+test_search_hides_disqualified_options_and_limits_results (test_tour_compare.ComparisonTests.test_search_hides_disqualified_options_and_limits_results) ... ok
+test_unknown_overnight_travel_is_not_confirmed_safe (test_tour_compare.ComparisonTests.test_unknown_overnight_travel_is_not_confirmed_safe) ... ok
+test_unrelated_question_preserves_state (test_tour_compare.ComparisonTests.test_unrelated_question_preserves_state) ... ok
+test_unspecified_fee_does_not_become_zero (test_tour_compare.ComparisonTests.test_unspecified_fee_does_not_become_zero) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.020s
+
+OK

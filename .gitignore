@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+.tools/
+evaluation/runs/
+*.log
+docs/
+report/
+personal_guide/
+PROJECT_NOTES.md

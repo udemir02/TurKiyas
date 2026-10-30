@@ -1,0 +1,1733 @@
+{
+  "backend": "rules",
+  "model": null,
+  "split": "evaluation",
+  "timestamp": "2026-10-30T17:27:05.618278+00:00",
+  "cases_sha256": "b0e59b85a5af9ac4f82c80c28c862555f2ad7717e95a2742791dd402ab98e8d2",
+  "application_sha256": "4ab31288a6b9cfe0f5f7394857c7653a94666fe006a85a874ba3335ff019c0f1",
+  "method": "Fixed authored gold cases; exact constraint state, ID selection, required criteria, scope, unsupported detection and selected eligibility checks. Not a user study or real-market benchmark.",
+  "summary": {
+    "total": 30,
+    "passed": 14,
+    "categories": {
+      "selection": {
+        "passed": 3,
+        "total": 4
+      },
+      "budget": {
+        "passed": 2,
+        "total": 3
+      },
+      "negation": {
+        "passed": 1,
+        "total": 2
+      },
+      "nights": {
+        "passed": 0,
+        "total": 1
+      },
+      "inclusion": {
+        "passed": 0,
+        "total": 2
+      },
+      "location": {
+        "passed": 2,
+        "total": 3
+      },
+      "followup": {
+        "passed": 2,
+        "total": 4
+      },
+      "unknown": {
+        "passed": 2,
+        "total": 3
+      },
+      "unsupported": {
+        "passed": 0,
+        "total": 3
+      },
+      "scope": {
+        "passed": 0,
+        "total": 1
+      },
+      "validation": {
+        "passed": 2,
+        "total": 2
+      },
+      "multiple": {
+        "passed": 0,
+        "total": 2
+      }
+    },
+    "model_calls": 0,
+    "mean_model_seconds": null,
+    "median_model_seconds": null,
+    "max_model_seconds": null
+  },
+  "records": [
+    {
+      "id": "E01",
+      "category": "selection",
+      "question": "T09 ile T10 arasında fiyat farkını göster.",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "tour_ids": [
+          "T09",
+          "T10"
+        ],
+        "constraints": {},
+        "criteria_contains": [
+          "price"
+        ]
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [
+          "T09",
+          "T10"
+        ],
+        "criteria": [
+          "price"
+        ],
+        "constraints": {},
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [
+          "T09",
+          "T10"
+        ],
+        "criteria": [
+          "price"
+        ],
+        "constraints": {}
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": true,
+        "tour_ids": true,
+        "criteria": true,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\n\nT09 — Pamukkale Örnek Tur T09 (İstanbul çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 3.900 TL / kişi\n    [T09:price] Kişi başı taban ücret 3900 TL'dir.\n  Taban + bilinen zorunlu ekler: 4.400 TL / kişi [T09:price + T09:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT10 — Pamukkale Örnek Tur T10 (İstanbul çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 5.100 TL / kişi\n    [T10:price] Kişi başı taban ücret 5100 TL'dir.\n  Taban + bilinen zorunlu ekler: 5.100 TL / kişi [T10:price + T10:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": true,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E02",
+      "category": "selection",
+      "question": "T14, T13 ve T16 turlarının otelde konaklama süresini karşılaştır.",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "tour_ids": [
+          "T14",
+          "T13",
+          "T16"
+        ],
+        "constraints": {},
+        "criteria_contains": [
+          "nights"
+        ]
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [
+          "T14",
+          "T13",
+          "T16"
+        ],
+        "criteria": [
+          "nights"
+        ],
+        "constraints": {},
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [
+          "T14",
+          "T13",
+          "T16"
+        ],
+        "criteria": [
+          "nights"
+        ],
+        "constraints": {}
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": true,
+        "tour_ids": true,
+        "criteria": true,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\n\nT13 — Ege Örnek Tur T13 (İzmir çıkışlı)\nBelirtilen koşullara uygun\n  Otelde gece: 2\n    [T13:nights] Programda otelde 2 gece konaklama vardır.\n  Taban + bilinen zorunlu ekler: 6.150 TL / kişi [T13:price + T13:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT14 — Ege Örnek Tur T14 (İzmir çıkışlı)\nBelirtilen koşullara uygun\n  Otelde gece: 3\n    [T14:nights] Programda otelde 3 gece konaklama vardır.\n  Taban + bilinen zorunlu ekler: 6.900 TL / kişi [T14:price + T14:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT16 — Ege Örnek Tur T16 (İzmir çıkışlı)\nBelirtilen koşullara uygun\n  Otelde gece: 3\n    [T16:nights] Programda otelde 3 gece konaklama vardır.\n  Taban + bilinen zorunlu ekler: 7.750 TL / kişi [T16:price + T16:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": true,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E03",
+      "category": "budget",
+      "question": "Kişi başı 5.500 TL'yi aşmak istemiyorum.",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "constraints": {
+          "max_price": 5500
+        }
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [],
+        "criteria": [],
+        "constraints": {
+          "max_price": 5500
+        },
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {
+          "max_price": 5500
+        }
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": true,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\nEtkin koşullar: {\"max_price\": 5500}\n\nT19 — Safranbolu Örnek Tur T19 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 2.100 TL / kişi\n    [T19:price] Kişi başı taban ücret 2100 TL'dir.\n  Otelde gece: 1\n    [T19:nights] Programda otelde 1 gece konaklama vardır.\n  Gece otobüs yolculuğu: Evet\n    [T19:overnight_bus] Program gece otobüs yolculuğu içerir.\n  Zorunlu ek ücret: 250 TL / kişi\n    [T19:mandatory_fee] Taban ücrete ek zorunlu ücret kişi başı 250 TL'dir.\n  Taban + bilinen zorunlu ekler: 2.350 TL / kişi [T19:price + T19:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT17 — Safranbolu Örnek Tur T17 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 2.400 TL / kişi\n    [T17:price] Kişi başı taban ücret 2400 TL'dir.\n  Otelde gece: 1\n    [T17:nights] Programda otelde 1 gece konaklama vardır.\n  Gece otobüs yolculuğu: Hayır\n    [T17:overnight_bus] Program gece otobüs yolculuğu içermez.\n  Zorunlu ek ücret: 100 TL / kişi\n    [T17:mandatory_fee] Taban ücrete ek zorunlu ücret kişi başı 100 TL'dir.\n  Taban + bilinen zorunlu ekler: 2.500 TL / kişi [T17:price + T17:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT18 — Safranbolu Örnek Tur T18 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 3.200 TL / kişi\n    [T18:price] Kişi başı taban ücret 3200 TL'dir.\n  Otelde gece: 2\n    [T18:nights] Programda otelde 2 gece konaklama vardır.\n  Gece otobüs yolculuğu: Hayır\n    [T18:overnight_bus] Program gece otobüs yolculuğu içermez.\n  Zorunlu ek ücret: 0 TL / kişi\n    [T18:mandatory_fee] Taban ücrete ek zorunlu ücret yoktur.\n  Taban + bilinen zorunlu ekler: 3.200 TL / kişi [T18:price + T18:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": true,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E04",
+      "category": "budget",
+      "question": "En fazla sekiz bin lira harcayabilirim.",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "constraints": {
+          "max_price": 8000
+        }
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [],
+        "criteria": [],
+        "constraints": {},
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": false,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\n\nT19 — Safranbolu Örnek Tur T19 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 2.100 TL / kişi\n    [T19:price] Kişi başı taban ücret 2100 TL'dir.\n  Otelde gece: 1\n    [T19:nights] Programda otelde 1 gece konaklama vardır.\n  Gece otobüs yolculuğu: Evet\n    [T19:overnight_bus] Program gece otobüs yolculuğu içerir.\n  Zorunlu ek ücret: 250 TL / kişi\n    [T19:mandatory_fee] Taban ücrete ek zorunlu ücret kişi başı 250 TL'dir.\n  Taban + bilinen zorunlu ekler: 2.350 TL / kişi [T19:price + T19:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT17 — Safranbolu Örnek Tur T17 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 2.400 TL / kişi\n    [T17:price] Kişi başı taban ücret 2400 TL'dir.\n  Otelde gece: 1\n    [T17:nights] Programda otelde 1 gece konaklama vardır.\n  Gece otobüs yolculuğu: Hayır\n    [T17:overnight_bus] Program gece otobüs yolculuğu içermez.\n  Zorunlu ek ücret: 100 TL / kişi\n    [T17:mandatory_fee] Taban ücrete ek zorunlu ücret kişi başı 100 TL'dir.\n  Taban + bilinen zorunlu ekler: 2.500 TL / kişi [T17:price + T17:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT20 — Safranbolu Örnek Tur T20 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 2.900 TL / kişi\n    [T20:price] Kişi başı taban ücret 2900 TL'dir.\n  Otelde gece: 2\n    [T20:nights] Programda otelde 2 gece konaklama vardır.\n  Gece otobüs yolculuğu: Belirtilmemiş; doğrulanamıyor\n  Zorunlu ek ücret: Belirtilmemiş; doğrulanamıyor\n  Kesin toplam hesaplanamıyor: taban fiyat veya zorunlu ek ücret bilgisi eksik.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": false,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E05",
+      "category": "budget",
+      "question": "T01 ve T02 için bütçem 5800 TL.",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "tour_ids": [
+          "T01",
+          "T02"
+        ],
+        "constraints": {
+          "max_price": 5800
+        },
+        "statuses": {
+          "T01": "eligible",
+          "T02": "excluded"
+        }
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [
+          "T01",
+          "T02"
+        ],
+        "criteria": [
+          "price"
+        ],
+        "constraints": {
+          "max_price": 5800
+        },
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [
+          "T01",
+          "T02"
+        ],
+        "criteria": [
+          "price"
+        ],
+        "constraints": {
+          "max_price": 5800
+        }
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": true,
+        "tour_ids": true,
+        "unsupported": true,
+        "statuses": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\nEtkin koşullar: {\"max_price\": 5800}\n\nT01 — Kapadokya Örnek Tur T01 (İstanbul çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 5.200 TL / kişi\n    [T01:price] Kişi başı taban ücret 5200 TL'dir.\n  Taban + bilinen zorunlu ekler: 5.800 TL / kişi [T01:price + T01:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT02 — Kapadokya Örnek Tur T02 (İstanbul çıkışlı)\nKoşullara uymuyor\nUymayan alanlar: Taban fiyat\n  Taban fiyat: 6.900 TL / kişi\n    [T02:price] Kişi başı taban ücret 6900 TL'dir.\n  Taban + bilinen zorunlu ekler: 6.900 TL / kişi [T02:price + T02:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": true,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E06",
+      "category": "negation",
+      "question": "Gece otobüsü bana göre değil, böyle bir yolculuk olmasın.",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "constraints": {
+          "avoid_overnight_bus": true
+        },
+        "criteria_contains": [
+          "overnight_bus"
+        ]
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [],
+        "criteria": [
+          "nights",
+          "overnight_bus"
+        ],
+        "constraints": {
+          "avoid_overnight_bus": true
+        },
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [],
+        "criteria": [
+          "nights",
+          "overnight_bus"
+        ],
+        "constraints": {
+          "avoid_overnight_bus": true
+        }
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": true,
+        "criteria": true,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\nEtkin koşullar: {\"avoid_overnight_bus\": true}\n\nT17 — Safranbolu Örnek Tur T17 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Otelde gece: 1\n    [T17:nights] Programda otelde 1 gece konaklama vardır.\n  Gece otobüs yolculuğu: Hayır\n    [T17:overnight_bus] Program gece otobüs yolculuğu içermez.\n  Taban + bilinen zorunlu ekler: 2.500 TL / kişi [T17:price + T17:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT18 — Safranbolu Örnek Tur T18 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Otelde gece: 2\n    [T18:nights] Programda otelde 2 gece konaklama vardır.\n  Gece otobüs yolculuğu: Hayır\n    [T18:overnight_bus] Program gece otobüs yolculuğu içermez.\n  Taban + bilinen zorunlu ekler: 3.200 TL / kişi [T18:price + T18:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT11 — Pamukkale Örnek Tur T11 (İstanbul çıkışlı)\nBelirtilen koşullara uygun\n  Otelde gece: 2\n    [T11:nights] Programda otelde 2 gece konaklama vardır.\n  Gece otobüs yolculuğu: Hayır\n    [T11:overnight_bus] Program gece otobüs yolculuğu içermez.\n  Taban + bilinen zorunlu ekler: 4.900 TL / kişi [T11:price + T11:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": true,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E07",
+      "category": "negation",
+      "question": "Otobüste uyumak istemiyorum; bana uygun seçenekleri bul.",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "constraints": {
+          "avoid_overnight_bus": true
+        }
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [],
+        "criteria": [
+          "overnight_bus"
+        ],
+        "constraints": {},
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [],
+        "criteria": [
+          "overnight_bus"
+        ],
+        "constraints": {}
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": false,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\n\nT19 — Safranbolu Örnek Tur T19 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Gece otobüs yolculuğu: Evet\n    [T19:overnight_bus] Program gece otobüs yolculuğu içerir.\n  Taban + bilinen zorunlu ekler: 2.350 TL / kişi [T19:price + T19:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT17 — Safranbolu Örnek Tur T17 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Gece otobüs yolculuğu: Hayır\n    [T17:overnight_bus] Program gece otobüs yolculuğu içermez.\n  Taban + bilinen zorunlu ekler: 2.500 TL / kişi [T17:price + T17:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT20 — Safranbolu Örnek Tur T20 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Gece otobüs yolculuğu: Belirtilmemiş; doğrulanamıyor\n  Kesin toplam hesaplanamıyor: taban fiyat veya zorunlu ek ücret bilgisi eksik.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": false,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E08",
+      "category": "nights",
+      "question": "Konaklama otelde en az üç gece olmalı.",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "constraints": {
+          "min_nights": 3
+        },
+        "criteria_contains": [
+          "nights"
+        ]
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [],
+        "criteria": [
+          "nights"
+        ],
+        "constraints": {},
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [],
+        "criteria": [
+          "nights"
+        ],
+        "constraints": {}
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": false,
+        "criteria": true,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\n\nT19 — Safranbolu Örnek Tur T19 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Otelde gece: 1\n    [T19:nights] Programda otelde 1 gece konaklama vardır.\n  Taban + bilinen zorunlu ekler: 2.350 TL / kişi [T19:price + T19:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT17 — Safranbolu Örnek Tur T17 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Otelde gece: 1\n    [T17:nights] Programda otelde 1 gece konaklama vardır.\n  Taban + bilinen zorunlu ekler: 2.500 TL / kişi [T17:price + T17:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT20 — Safranbolu Örnek Tur T20 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Otelde gece: 2\n    [T20:nights] Programda otelde 2 gece konaklama vardır.\n  Kesin toplam hesaplanamıyor: taban fiyat veya zorunlu ek ücret bilgisi eksik.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": false,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E09",
+      "category": "inclusion",
+      "question": "Kahvaltıya ayrıca para ödemek istemiyorum.",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "constraints": {
+          "breakfast_required": true
+        },
+        "criteria_contains": [
+          "breakfast"
+        ]
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [],
+        "criteria": [
+          "breakfast"
+        ],
+        "constraints": {},
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [],
+        "criteria": [
+          "breakfast"
+        ],
+        "constraints": {}
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": false,
+        "criteria": true,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\n\nT19 — Safranbolu Örnek Tur T19 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Kahvaltı dahil: Belirtilmemiş; doğrulanamıyor\n  Taban + bilinen zorunlu ekler: 2.350 TL / kişi [T19:price + T19:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT17 — Safranbolu Örnek Tur T17 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Kahvaltı dahil: Evet\n    [T17:breakfast] Kahvaltı taban ücrete dahildir.\n  Taban + bilinen zorunlu ekler: 2.500 TL / kişi [T17:price + T17:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT20 — Safranbolu Örnek Tur T20 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Kahvaltı dahil: Hayır\n    [T20:breakfast] Kahvaltı taban ücrete dahil değildir.\n  Kesin toplam hesaplanamıyor: taban fiyat veya zorunlu ek ücret bilgisi eksik.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": false,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E10",
+      "category": "inclusion",
+      "question": "Müze girişlerinin fiyata dahil olması şart.",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "constraints": {
+          "museums_required": true
+        },
+        "criteria_contains": [
+          "museums"
+        ]
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "museums"
+        ],
+        "constraints": {},
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "museums"
+        ],
+        "constraints": {}
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": false,
+        "criteria": true,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\n\nT19 — Safranbolu Örnek Tur T19 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 2.100 TL / kişi\n    [T19:price] Kişi başı taban ücret 2100 TL'dir.\n  Müze girişleri dahil: Hayır\n    [T19:museums] Müze girişleri taban ücrete dahil değildir.\n  Taban + bilinen zorunlu ekler: 2.350 TL / kişi [T19:price + T19:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT17 — Safranbolu Örnek Tur T17 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 2.400 TL / kişi\n    [T17:price] Kişi başı taban ücret 2400 TL'dir.\n  Müze girişleri dahil: Hayır\n    [T17:museums] Müze girişleri taban ücrete dahil değildir.\n  Taban + bilinen zorunlu ekler: 2.500 TL / kişi [T17:price + T17:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT20 — Safranbolu Örnek Tur T20 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 2.900 TL / kişi\n    [T20:price] Kişi başı taban ücret 2900 TL'dir.\n  Müze girişleri dahil: Belirtilmemiş; doğrulanamıyor\n  Kesin toplam hesaplanamıyor: taban fiyat veya zorunlu ek ücret bilgisi eksik.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": false,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E11",
+      "category": "location",
+      "question": "İzmir'den hareket eden Ege turlarına bakalım.",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "constraints": {
+          "destination": "Ege",
+          "departure": "İzmir"
+        }
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [],
+        "criteria": [],
+        "constraints": {
+          "destination": "Ege",
+          "departure": "İzmir"
+        },
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {
+          "destination": "Ege",
+          "departure": "İzmir"
+        }
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": true,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\nEtkin koşullar: {\"destination\": \"Ege\", \"departure\": \"İzmir\"}\n\nT15 — Ege Örnek Tur T15 (İzmir çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 4.300 TL / kişi\n    [T15:price] Kişi başı taban ücret 4300 TL'dir.\n  Otelde gece: 1\n    [T15:nights] Programda otelde 1 gece konaklama vardır.\n  Gece otobüs yolculuğu: Evet\n    [T15:overnight_bus] Program gece otobüs yolculuğu içerir.\n  Zorunlu ek ücret: Belirtilmemiş; doğrulanamıyor\n  Kesin toplam hesaplanamıyor: taban fiyat veya zorunlu ek ücret bilgisi eksik.\n\nT13 — Ege Örnek Tur T13 (İzmir çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 5.800 TL / kişi\n    [T13:price] Kişi başı taban ücret 5800 TL'dir.\n  Otelde gece: 2\n    [T13:nights] Programda otelde 2 gece konaklama vardır.\n  Gece otobüs yolculuğu: Hayır\n    [T13:overnight_bus] Program gece otobüs yolculuğu içermez.\n  Zorunlu ek ücret: 350 TL / kişi\n    [T13:mandatory_fee] Taban ücrete ek zorunlu ücret kişi başı 350 TL'dir.\n  Taban + bilinen zorunlu ekler: 6.150 TL / kişi [T13:price + T13:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT14 — Ege Örnek Tur T14 (İzmir çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 6.900 TL / kişi\n    [T14:price] Kişi başı taban ücret 6900 TL'dir.\n  Otelde gece: 3\n    [T14:nights] Programda otelde 3 gece konaklama vardır.\n  Gece otobüs yolculuğu: Hayır\n    [T14:overnight_bus] Program gece otobüs yolculuğu içermez.\n  Zorunlu ek ücret: 0 TL / kişi\n    [T14:mandatory_fee] Taban ücrete ek zorunlu ücret yoktur.\n  Taban + bilinen zorunlu ekler: 6.900 TL / kişi [T14:price + T14:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": true,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E12",
+      "category": "location",
+      "question": "Safranbolu için Ankara çıkışlı seçenekleri göster.",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "constraints": {
+          "destination": "Safranbolu",
+          "departure": "Ankara"
+        }
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [],
+        "criteria": [],
+        "constraints": {
+          "destination": "Safranbolu",
+          "departure": "Ankara"
+        },
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {
+          "destination": "Safranbolu",
+          "departure": "Ankara"
+        }
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": true,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\nEtkin koşullar: {\"destination\": \"Safranbolu\", \"departure\": \"Ankara\"}\n\nT19 — Safranbolu Örnek Tur T19 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 2.100 TL / kişi\n    [T19:price] Kişi başı taban ücret 2100 TL'dir.\n  Otelde gece: 1\n    [T19:nights] Programda otelde 1 gece konaklama vardır.\n  Gece otobüs yolculuğu: Evet\n    [T19:overnight_bus] Program gece otobüs yolculuğu içerir.\n  Zorunlu ek ücret: 250 TL / kişi\n    [T19:mandatory_fee] Taban ücrete ek zorunlu ücret kişi başı 250 TL'dir.\n  Taban + bilinen zorunlu ekler: 2.350 TL / kişi [T19:price + T19:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT17 — Safranbolu Örnek Tur T17 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 2.400 TL / kişi\n    [T17:price] Kişi başı taban ücret 2400 TL'dir.\n  Otelde gece: 1\n    [T17:nights] Programda otelde 1 gece konaklama vardır.\n  Gece otobüs yolculuğu: Hayır\n    [T17:overnight_bus] Program gece otobüs yolculuğu içermez.\n  Zorunlu ek ücret: 100 TL / kişi\n    [T17:mandatory_fee] Taban ücrete ek zorunlu ücret kişi başı 100 TL'dir.\n  Taban + bilinen zorunlu ekler: 2.500 TL / kişi [T17:price + T17:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT20 — Safranbolu Örnek Tur T20 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 2.900 TL / kişi\n    [T20:price] Kişi başı taban ücret 2900 TL'dir.\n  Otelde gece: 2\n    [T20:nights] Programda otelde 2 gece konaklama vardır.\n  Gece otobüs yolculuğu: Belirtilmemiş; doğrulanamıyor\n  Zorunlu ek ücret: Belirtilmemiş; doğrulanamıyor\n  Kesin toplam hesaplanamıyor: taban fiyat veya zorunlu ek ücret bilgisi eksik.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": true,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E13",
+      "category": "followup",
+      "question": "Üst sınırı 9000 TL yapalım.",
+      "input_state": {
+        "tour_ids": [
+          "T01",
+          "T02"
+        ],
+        "criteria": [
+          "price"
+        ],
+        "constraints": {
+          "max_price": 8000,
+          "avoid_overnight_bus": true
+        }
+      },
+      "expected": {
+        "tour_ids": [
+          "T01",
+          "T02"
+        ],
+        "constraints": {
+          "max_price": 9000,
+          "avoid_overnight_bus": true
+        }
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [],
+        "criteria": [],
+        "constraints": {
+          "max_price": 9000
+        },
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [
+          "T01",
+          "T02"
+        ],
+        "criteria": [
+          "price"
+        ],
+        "constraints": {
+          "max_price": 9000,
+          "avoid_overnight_bus": true
+        }
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": true,
+        "tour_ids": true,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\nEtkin koşullar: {\"max_price\": 9000, \"avoid_overnight_bus\": true}\n\nT02 — Kapadokya Örnek Tur T02 (İstanbul çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 6.900 TL / kişi\n    [T02:price] Kişi başı taban ücret 6900 TL'dir.\n  Taban + bilinen zorunlu ekler: 6.900 TL / kişi [T02:price + T02:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT01 — Kapadokya Örnek Tur T01 (İstanbul çıkışlı)\nKoşullara uymuyor\nUymayan alanlar: Gece otobüs yolculuğu\n  Taban fiyat: 5.200 TL / kişi\n    [T01:price] Kişi başı taban ücret 5200 TL'dir.\n  Taban + bilinen zorunlu ekler: 5.800 TL / kişi [T01:price + T01:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": true,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E14",
+      "category": "followup",
+      "question": "Artık bütçe sınırım yok.",
+      "input_state": {
+        "tour_ids": [
+          "T01",
+          "T02"
+        ],
+        "criteria": [
+          "price"
+        ],
+        "constraints": {
+          "max_price": 8000,
+          "min_nights": 2
+        }
+      },
+      "expected": {
+        "tour_ids": [
+          "T01",
+          "T02"
+        ],
+        "constraints": {
+          "min_nights": 2
+        }
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [],
+        "criteria": [
+          "price"
+        ],
+        "constraints": {},
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [
+          "T01",
+          "T02"
+        ],
+        "criteria": [
+          "price"
+        ],
+        "constraints": {
+          "max_price": 8000,
+          "min_nights": 2
+        }
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": false,
+        "tour_ids": true,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\nEtkin koşullar: {\"max_price\": 8000, \"min_nights\": 2}\n\nT01 — Kapadokya Örnek Tur T01 (İstanbul çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 5.200 TL / kişi\n    [T01:price] Kişi başı taban ücret 5200 TL'dir.\n  Taban + bilinen zorunlu ekler: 5.800 TL / kişi [T01:price + T01:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT02 — Kapadokya Örnek Tur T02 (İstanbul çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 6.900 TL / kişi\n    [T02:price] Kişi başı taban ücret 6900 TL'dir.\n  Taban + bilinen zorunlu ekler: 6.900 TL / kişi [T02:price + T02:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": false,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E15",
+      "category": "followup",
+      "question": "Gece otobüs yolculuğu artık olabilir.",
+      "input_state": {
+        "tour_ids": [
+          "T01",
+          "T02"
+        ],
+        "criteria": [
+          "price"
+        ],
+        "constraints": {
+          "avoid_overnight_bus": true
+        }
+      },
+      "expected": {
+        "tour_ids": [
+          "T01",
+          "T02"
+        ],
+        "constraints": {
+          "avoid_overnight_bus": false
+        }
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [],
+        "criteria": [
+          "nights",
+          "overnight_bus"
+        ],
+        "constraints": {},
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [
+          "T01",
+          "T02"
+        ],
+        "criteria": [
+          "nights",
+          "overnight_bus"
+        ],
+        "constraints": {
+          "avoid_overnight_bus": true
+        }
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": false,
+        "tour_ids": true,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\nEtkin koşullar: {\"avoid_overnight_bus\": true}\n\nT02 — Kapadokya Örnek Tur T02 (İstanbul çıkışlı)\nBelirtilen koşullara uygun\n  Otelde gece: 2\n    [T02:nights] Programda otelde 2 gece konaklama vardır.\n  Gece otobüs yolculuğu: Hayır\n    [T02:overnight_bus] Program gece otobüs yolculuğu içermez.\n  Taban + bilinen zorunlu ekler: 6.900 TL / kişi [T02:price + T02:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT01 — Kapadokya Örnek Tur T01 (İstanbul çıkışlı)\nKoşullara uymuyor\nUymayan alanlar: Gece otobüs yolculuğu\n  Otelde gece: 2\n    [T01:nights] Programda otelde 2 gece konaklama vardır.\n  Gece otobüs yolculuğu: Evet\n    [T01:overnight_bus] Program gece otobüs yolculuğu içerir.\n  Taban + bilinen zorunlu ekler: 5.800 TL / kişi [T01:price + T01:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": false,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E16",
+      "category": "followup",
+      "question": "Bunun yerine Ege turlarını göster.",
+      "input_state": {
+        "tour_ids": [
+          "T01",
+          "T02"
+        ],
+        "criteria": [
+          "price"
+        ],
+        "constraints": {
+          "destination": "Kapadokya",
+          "max_price": 8000
+        }
+      },
+      "expected": {
+        "tour_ids": [],
+        "constraints": {
+          "destination": "Ege",
+          "max_price": 8000
+        }
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [],
+        "criteria": [],
+        "constraints": {
+          "destination": "Ege"
+        },
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price"
+        ],
+        "constraints": {
+          "destination": "Ege",
+          "max_price": 8000
+        }
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": true,
+        "tour_ids": true,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\nEtkin koşullar: {\"destination\": \"Ege\", \"max_price\": 8000}\n\nT13 — Ege Örnek Tur T13 (İzmir çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 5.800 TL / kişi\n    [T13:price] Kişi başı taban ücret 5800 TL'dir.\n  Taban + bilinen zorunlu ekler: 6.150 TL / kişi [T13:price + T13:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT14 — Ege Örnek Tur T14 (İzmir çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 6.900 TL / kişi\n    [T14:price] Kişi başı taban ücret 6900 TL'dir.\n  Taban + bilinen zorunlu ekler: 6.900 TL / kişi [T14:price + T14:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT16 — Ege Örnek Tur T16 (İzmir çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 7.500 TL / kişi\n    [T16:price] Kişi başı taban ücret 7500 TL'dir.\n  Taban + bilinen zorunlu ekler: 7.750 TL / kişi [T16:price + T16:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": true,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E17",
+      "category": "unknown",
+      "question": "T03 ve T04'te kahvaltı dahil mi?",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "tour_ids": [
+          "T03",
+          "T04"
+        ],
+        "constraints": {},
+        "criteria_contains": [
+          "breakfast"
+        ]
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [
+          "T03",
+          "T04"
+        ],
+        "criteria": [
+          "breakfast"
+        ],
+        "constraints": {},
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [
+          "T03",
+          "T04"
+        ],
+        "criteria": [
+          "breakfast"
+        ],
+        "constraints": {}
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": true,
+        "tour_ids": true,
+        "criteria": true,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\n\nT03 — Kapadokya Örnek Tur T03 (İstanbul çıkışlı)\nBelirtilen koşullara uygun\n  Kahvaltı dahil: Belirtilmemiş; doğrulanamıyor\n  Kesin toplam hesaplanamıyor: taban fiyat veya zorunlu ek ücret bilgisi eksik.\n\nT04 — Kapadokya Örnek Tur T04 (İstanbul çıkışlı)\nBelirtilen koşullara uygun\n  Kahvaltı dahil: Hayır\n    [T04:breakfast] Kahvaltı taban ücrete dahil değildir.\n  Taban + bilinen zorunlu ekler: 8.000 TL / kişi [T04:price + T04:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": true,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E18",
+      "category": "unknown",
+      "question": "T07'de gece otobüsü olmaması şart.",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "tour_ids": [
+          "T07"
+        ],
+        "constraints": {
+          "avoid_overnight_bus": true
+        },
+        "statuses": {
+          "T07": "unverified"
+        }
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [
+          "T07"
+        ],
+        "criteria": [
+          "nights",
+          "overnight_bus"
+        ],
+        "constraints": {},
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [
+          "T07"
+        ],
+        "criteria": [
+          "nights",
+          "overnight_bus"
+        ],
+        "constraints": {}
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": false,
+        "tour_ids": true,
+        "unsupported": true,
+        "statuses": false
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\n\nT07 — Karadeniz Örnek Tur T07 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Otelde gece: 2\n    [T07:nights] Programda otelde 2 gece konaklama vardır.\n  Gece otobüs yolculuğu: Belirtilmemiş; doğrulanamıyor\n  Taban + bilinen zorunlu ekler: 7.500 TL / kişi [T07:price + T07:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": false,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E19",
+      "category": "unknown",
+      "question": "T03 için bütçem 5000 TL. Uygun mu?",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "tour_ids": [
+          "T03"
+        ],
+        "constraints": {
+          "max_price": 5000
+        },
+        "statuses": {
+          "T03": "unverified"
+        }
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [
+          "T03"
+        ],
+        "criteria": [
+          "price"
+        ],
+        "constraints": {
+          "max_price": 5000
+        },
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [
+          "T03"
+        ],
+        "criteria": [
+          "price"
+        ],
+        "constraints": {
+          "max_price": 5000
+        }
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": true,
+        "tour_ids": true,
+        "unsupported": true,
+        "statuses": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\nEtkin koşullar: {\"max_price\": 5000}\n\nT03 — Kapadokya Örnek Tur T03 (İstanbul çıkışlı)\nKoşullar için eksik bilgi var\nDoğrulanamayan alanlar: Zorunlu ek ücret\n  Taban fiyat: 4.500 TL / kişi\n    [T03:price] Kişi başı taban ücret 4500 TL'dir.\n  Kesin toplam hesaplanamıyor: taban fiyat veya zorunlu ek ücret bilgisi eksik.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": true,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E20",
+      "category": "unsupported",
+      "question": "T02 turunda evcil hayvan kabul ediliyor mu?",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "tour_ids": [
+          "T02"
+        ],
+        "constraints": {},
+        "unsupported": true
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [
+          "T02"
+        ],
+        "criteria": [],
+        "constraints": {},
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [
+          "T02"
+        ],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": true,
+        "tour_ids": true,
+        "unsupported": false
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\n\nT02 — Kapadokya Örnek Tur T02 (İstanbul çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 6.900 TL / kişi\n    [T02:price] Kişi başı taban ücret 6900 TL'dir.\n  Otelde gece: 2\n    [T02:nights] Programda otelde 2 gece konaklama vardır.\n  Gece otobüs yolculuğu: Hayır\n    [T02:overnight_bus] Program gece otobüs yolculuğu içermez.\n  Zorunlu ek ücret: 0 TL / kişi\n    [T02:mandatory_fee] Taban ücrete ek zorunlu ücret yoktur.\n  Taban + bilinen zorunlu ekler: 6.900 TL / kişi [T02:price + T02:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": false,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E21",
+      "category": "unsupported",
+      "question": "T10 için yarın yer var mı?",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "tour_ids": [
+          "T10"
+        ],
+        "constraints": {},
+        "unsupported": true
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [
+          "T10"
+        ],
+        "criteria": [],
+        "constraints": {},
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [
+          "T10"
+        ],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": true,
+        "tour_ids": true,
+        "unsupported": false
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\n\nT10 — Pamukkale Örnek Tur T10 (İstanbul çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 5.100 TL / kişi\n    [T10:price] Kişi başı taban ücret 5100 TL'dir.\n  Otelde gece: 2\n    [T10:nights] Programda otelde 2 gece konaklama vardır.\n  Gece otobüs yolculuğu: Hayır\n    [T10:overnight_bus] Program gece otobüs yolculuğu içermez.\n  Zorunlu ek ücret: 0 TL / kişi\n    [T10:mandatory_fee] Taban ücrete ek zorunlu ücret yoktur.\n  Taban + bilinen zorunlu ekler: 5.100 TL / kişi [T10:price + T10:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": false,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E22",
+      "category": "unsupported",
+      "question": "T18 hangi otelde konaklıyor?",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "tour_ids": [
+          "T18"
+        ],
+        "constraints": {},
+        "unsupported": true
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [
+          "T18"
+        ],
+        "criteria": [],
+        "constraints": {},
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [
+          "T18"
+        ],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": true,
+        "tour_ids": true,
+        "unsupported": false
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\n\nT18 — Safranbolu Örnek Tur T18 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 3.200 TL / kişi\n    [T18:price] Kişi başı taban ücret 3200 TL'dir.\n  Otelde gece: 2\n    [T18:nights] Programda otelde 2 gece konaklama vardır.\n  Gece otobüs yolculuğu: Hayır\n    [T18:overnight_bus] Program gece otobüs yolculuğu içermez.\n  Zorunlu ek ücret: 0 TL / kişi\n    [T18:mandatory_fee] Taban ücrete ek zorunlu ücret yoktur.\n  Taban + bilinen zorunlu ekler: 3.200 TL / kişi [T18:price + T18:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": false,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E23",
+      "category": "scope",
+      "question": "Bana bir kek tarifi verir misin?",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "in_scope": false,
+        "constraints": {}
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [],
+        "criteria": [],
+        "constraints": {},
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": false,
+        "constraints_exact": true,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\n\nT19 — Safranbolu Örnek Tur T19 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 2.100 TL / kişi\n    [T19:price] Kişi başı taban ücret 2100 TL'dir.\n  Otelde gece: 1\n    [T19:nights] Programda otelde 1 gece konaklama vardır.\n  Gece otobüs yolculuğu: Evet\n    [T19:overnight_bus] Program gece otobüs yolculuğu içerir.\n  Zorunlu ek ücret: 250 TL / kişi\n    [T19:mandatory_fee] Taban ücrete ek zorunlu ücret kişi başı 250 TL'dir.\n  Taban + bilinen zorunlu ekler: 2.350 TL / kişi [T19:price + T19:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT17 — Safranbolu Örnek Tur T17 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 2.400 TL / kişi\n    [T17:price] Kişi başı taban ücret 2400 TL'dir.\n  Otelde gece: 1\n    [T17:nights] Programda otelde 1 gece konaklama vardır.\n  Gece otobüs yolculuğu: Hayır\n    [T17:overnight_bus] Program gece otobüs yolculuğu içermez.\n  Zorunlu ek ücret: 100 TL / kişi\n    [T17:mandatory_fee] Taban ücrete ek zorunlu ücret kişi başı 100 TL'dir.\n  Taban + bilinen zorunlu ekler: 2.500 TL / kişi [T17:price + T17:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT20 — Safranbolu Örnek Tur T20 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 2.900 TL / kişi\n    [T20:price] Kişi başı taban ücret 2900 TL'dir.\n  Otelde gece: 2\n    [T20:nights] Programda otelde 2 gece konaklama vardır.\n  Gece otobüs yolculuğu: Belirtilmemiş; doğrulanamıyor\n  Zorunlu ek ücret: Belirtilmemiş; doğrulanamıyor\n  Kesin toplam hesaplanamıyor: taban fiyat veya zorunlu ek ücret bilgisi eksik.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": false,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E24",
+      "category": "validation",
+      "question": "T99 turunu karşılaştır.",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "error": true
+      },
+      "error": "Katalogda olmayan tur kodu: T99",
+      "passed": true,
+      "checks": {
+        "expected_error": true
+      },
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E25",
+      "category": "validation",
+      "question": "T01, T02, T03 ve T04 turlarını birlikte karşılaştır.",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "error": true
+      },
+      "error": "Bir seferde en fazla üç tur karşılaştırılabilir.",
+      "passed": true,
+      "checks": {
+        "expected_error": true
+      },
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E26",
+      "category": "multiple",
+      "question": "Kapadokya'da en az 2 gece, kahvaltı dahil ve bütçem 8000 TL olsun.",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "constraints": {
+          "destination": "Kapadokya",
+          "min_nights": 2,
+          "breakfast_required": true,
+          "max_price": 8000
+        }
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "breakfast"
+        ],
+        "constraints": {
+          "max_price": 8000,
+          "min_nights": 2,
+          "destination": "Kapadokya"
+        },
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "breakfast"
+        ],
+        "constraints": {
+          "max_price": 8000,
+          "min_nights": 2,
+          "destination": "Kapadokya"
+        }
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": false,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\nEtkin koşullar: {\"max_price\": 8000, \"min_nights\": 2, \"destination\": \"Kapadokya\"}\n\nT01 — Kapadokya Örnek Tur T01 (İstanbul çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 5.200 TL / kişi\n    [T01:price] Kişi başı taban ücret 5200 TL'dir.\n  Otelde gece: 2\n    [T01:nights] Programda otelde 2 gece konaklama vardır.\n  Kahvaltı dahil: Evet\n    [T01:breakfast] Kahvaltı taban ücrete dahildir.\n  Taban + bilinen zorunlu ekler: 5.800 TL / kişi [T01:price + T01:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT02 — Kapadokya Örnek Tur T02 (İstanbul çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 6.900 TL / kişi\n    [T02:price] Kişi başı taban ücret 6900 TL'dir.\n  Otelde gece: 2\n    [T02:nights] Programda otelde 2 gece konaklama vardır.\n  Kahvaltı dahil: Evet\n    [T02:breakfast] Kahvaltı taban ücrete dahildir.\n  Taban + bilinen zorunlu ekler: 6.900 TL / kişi [T02:price + T02:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT04 — Kapadokya Örnek Tur T04 (İstanbul çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 7.600 TL / kişi\n    [T04:price] Kişi başı taban ücret 7600 TL'dir.\n  Otelde gece: 3\n    [T04:nights] Programda otelde 3 gece konaklama vardır.\n  Kahvaltı dahil: Hayır\n    [T04:breakfast] Kahvaltı taban ücrete dahil değildir.\n  Taban + bilinen zorunlu ekler: 8.000 TL / kişi [T04:price + T04:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": false,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E27",
+      "category": "multiple",
+      "question": "Ankara çıkışlı, gece otobüsü olmayan ve müze girişleri dahil bir tur istiyorum.",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "constraints": {
+          "departure": "Ankara",
+          "avoid_overnight_bus": true,
+          "museums_required": true
+        }
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [],
+        "criteria": [
+          "nights",
+          "overnight_bus",
+          "museums"
+        ],
+        "constraints": {
+          "departure": "Ankara"
+        },
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [],
+        "criteria": [
+          "nights",
+          "overnight_bus",
+          "museums"
+        ],
+        "constraints": {
+          "departure": "Ankara"
+        }
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": false,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\nEtkin koşullar: {\"departure\": \"Ankara\"}\n\nT19 — Safranbolu Örnek Tur T19 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Otelde gece: 1\n    [T19:nights] Programda otelde 1 gece konaklama vardır.\n  Gece otobüs yolculuğu: Evet\n    [T19:overnight_bus] Program gece otobüs yolculuğu içerir.\n  Müze girişleri dahil: Hayır\n    [T19:museums] Müze girişleri taban ücrete dahil değildir.\n  Taban + bilinen zorunlu ekler: 2.350 TL / kişi [T19:price + T19:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT17 — Safranbolu Örnek Tur T17 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Otelde gece: 1\n    [T17:nights] Programda otelde 1 gece konaklama vardır.\n  Gece otobüs yolculuğu: Hayır\n    [T17:overnight_bus] Program gece otobüs yolculuğu içermez.\n  Müze girişleri dahil: Hayır\n    [T17:museums] Müze girişleri taban ücrete dahil değildir.\n  Taban + bilinen zorunlu ekler: 2.500 TL / kişi [T17:price + T17:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT20 — Safranbolu Örnek Tur T20 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Otelde gece: 2\n    [T20:nights] Programda otelde 2 gece konaklama vardır.\n  Gece otobüs yolculuğu: Belirtilmemiş; doğrulanamıyor\n  Müze girişleri dahil: Belirtilmemiş; doğrulanamıyor\n  Kesin toplam hesaplanamıyor: taban fiyat veya zorunlu ek ücret bilgisi eksik.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": false,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E28",
+      "category": "selection",
+      "question": "T15 ve T16 için isteğe bağlı gezi ücretleri ne kadar?",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "tour_ids": [
+          "T15",
+          "T16"
+        ],
+        "constraints": {},
+        "criteria_contains": [
+          "optional_fee"
+        ]
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [
+          "T15",
+          "T16"
+        ],
+        "criteria": [
+          "optional_fee"
+        ],
+        "constraints": {
+          "destination": "Ege"
+        },
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [
+          "T15",
+          "T16"
+        ],
+        "criteria": [
+          "optional_fee"
+        ],
+        "constraints": {
+          "destination": "Ege"
+        }
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": false,
+        "tour_ids": true,
+        "criteria": true,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\nEtkin koşullar: {\"destination\": \"Ege\"}\n\nT15 — Ege Örnek Tur T15 (İzmir çıkışlı)\nBelirtilen koşullara uygun\n  İsteğe bağlı gezi ücreti: 500 TL / kişi\n    [T15:optional_fee] İsteğe bağlı gezi paketi kişi başı 500 TL'dir.\n  Kesin toplam hesaplanamıyor: taban fiyat veya zorunlu ek ücret bilgisi eksik.\n\nT16 — Ege Örnek Tur T16 (İzmir çıkışlı)\nBelirtilen koşullara uygun\n  İsteğe bağlı gezi ücreti: 0 TL / kişi\n    [T16:optional_fee] Programda ücretli isteğe bağlı gezi paketi yoktur.\n  Taban + bilinen zorunlu ekler: 7.750 TL / kişi [T16:price + T16:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": false,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E29",
+      "category": "selection",
+      "question": "T11 ve T10 müze girişlerini karşılaştır.",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "tour_ids": [
+          "T11",
+          "T10"
+        ],
+        "constraints": {},
+        "criteria_contains": [
+          "museums"
+        ]
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [
+          "T11",
+          "T10"
+        ],
+        "criteria": [
+          "museums"
+        ],
+        "constraints": {},
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [
+          "T11",
+          "T10"
+        ],
+        "criteria": [
+          "museums"
+        ],
+        "constraints": {}
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": true,
+        "tour_ids": true,
+        "criteria": true,
+        "unsupported": true
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\n\nT11 — Pamukkale Örnek Tur T11 (İstanbul çıkışlı)\nBelirtilen koşullara uygun\n  Müze girişleri dahil: Belirtilmemiş; doğrulanamıyor\n  Taban + bilinen zorunlu ekler: 4.900 TL / kişi [T11:price + T11:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT10 — Pamukkale Örnek Tur T10 (İstanbul çıkışlı)\nBelirtilen koşullara uygun\n  Müze girişleri dahil: Evet\n    [T10:museums] Müze girişleri taban ücrete dahildir.\n  Taban + bilinen zorunlu ekler: 5.100 TL / kişi [T10:price + T10:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": true,
+      "wall_seconds": 0.0
+    },
+    {
+      "id": "E30",
+      "category": "location",
+      "question": "Bursa çıkışlı tur arıyorum.",
+      "input_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "expected": {
+        "constraints": {
+          "departure": "Bursa"
+        },
+        "result_ids": []
+      },
+      "intent": {
+        "in_scope": true,
+        "tour_ids": [],
+        "criteria": [],
+        "constraints": {},
+        "clear": [],
+        "unsupported": []
+      },
+      "output_state": {
+        "tour_ids": [],
+        "criteria": [
+          "price",
+          "nights",
+          "overnight_bus",
+          "mandatory_fee"
+        ],
+        "constraints": {}
+      },
+      "metrics": {
+        "backend": "rules"
+      },
+      "checks": {
+        "in_scope": true,
+        "constraints_exact": false,
+        "unsupported": true,
+        "result_ids": false
+      },
+      "answer": "SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.\n\nT19 — Safranbolu Örnek Tur T19 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 2.100 TL / kişi\n    [T19:price] Kişi başı taban ücret 2100 TL'dir.\n  Otelde gece: 1\n    [T19:nights] Programda otelde 1 gece konaklama vardır.\n  Gece otobüs yolculuğu: Evet\n    [T19:overnight_bus] Program gece otobüs yolculuğu içerir.\n  Zorunlu ek ücret: 250 TL / kişi\n    [T19:mandatory_fee] Taban ücrete ek zorunlu ücret kişi başı 250 TL'dir.\n  Taban + bilinen zorunlu ekler: 2.350 TL / kişi [T19:price + T19:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT17 — Safranbolu Örnek Tur T17 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 2.400 TL / kişi\n    [T17:price] Kişi başı taban ücret 2400 TL'dir.\n  Otelde gece: 1\n    [T17:nights] Programda otelde 1 gece konaklama vardır.\n  Gece otobüs yolculuğu: Hayır\n    [T17:overnight_bus] Program gece otobüs yolculuğu içermez.\n  Zorunlu ek ücret: 100 TL / kişi\n    [T17:mandatory_fee] Taban ücrete ek zorunlu ücret kişi başı 100 TL'dir.\n  Taban + bilinen zorunlu ekler: 2.500 TL / kişi [T17:price + T17:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.\n\nT20 — Safranbolu Örnek Tur T20 (Ankara çıkışlı)\nBelirtilen koşullara uygun\n  Taban fiyat: 2.900 TL / kişi\n    [T20:price] Kişi başı taban ücret 2900 TL'dir.\n  Otelde gece: 2\n    [T20:nights] Programda otelde 2 gece konaklama vardır.\n  Gece otobüs yolculuğu: Belirtilmemiş; doğrulanamıyor\n  Zorunlu ek ücret: Belirtilmemiş; doğrulanamıyor\n  Kesin toplam hesaplanamıyor: taban fiyat veya zorunlu ek ücret bilgisi eksik.\n\nSıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.",
+      "passed": false,
+      "wall_seconds": 0.0
+    }
+  ]
+}

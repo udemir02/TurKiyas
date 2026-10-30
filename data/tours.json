@@ -1,0 +1,750 @@
+{
+  "kind": "synthetic",
+  "version": "1.0",
+  "created": "2026-10-21",
+  "licence": "CC0-1.0",
+  "currency": "TRY",
+  "price_basis": "per_person",
+  "tours": [
+    {
+      "id": "T01",
+      "name": "Kapadokya Örnek Tur T01",
+      "destination": "Kapadokya",
+      "departure": "İstanbul",
+      "description": "İstanbul çıkışlı Kapadokya örnek turu. Kişi başı taban ücret 5200 TL'dir. Programda otelde 2 gece konaklama vardır. Program gece otobüs yolculuğu içerir. Kahvaltı taban ücrete dahildir. Müze girişleri taban ücrete dahil değildir. Taban ücrete ek zorunlu ücret kişi başı 600 TL'dir. İsteğe bağlı gezi paketi kişi başı 350 TL'dir. Tarih, müsaitlik, otel adı ve kişisel harcamalar bu örnekte tanımlanmamıştır.",
+      "facts": {
+        "price": {
+          "value": 5200,
+          "evidence": "Kişi başı taban ücret 5200 TL'dir."
+        },
+        "nights": {
+          "value": 2,
+          "evidence": "Programda otelde 2 gece konaklama vardır."
+        },
+        "overnight_bus": {
+          "value": true,
+          "evidence": "Program gece otobüs yolculuğu içerir."
+        },
+        "breakfast": {
+          "value": true,
+          "evidence": "Kahvaltı taban ücrete dahildir."
+        },
+        "museums": {
+          "value": false,
+          "evidence": "Müze girişleri taban ücrete dahil değildir."
+        },
+        "mandatory_fee": {
+          "value": 600,
+          "evidence": "Taban ücrete ek zorunlu ücret kişi başı 600 TL'dir."
+        },
+        "optional_fee": {
+          "value": 350,
+          "evidence": "İsteğe bağlı gezi paketi kişi başı 350 TL'dir."
+        }
+      }
+    },
+    {
+      "id": "T02",
+      "name": "Kapadokya Örnek Tur T02",
+      "destination": "Kapadokya",
+      "departure": "İstanbul",
+      "description": "İstanbul çıkışlı Kapadokya örnek turu. Kişi başı taban ücret 6900 TL'dir. Programda otelde 2 gece konaklama vardır. Program gece otobüs yolculuğu içermez. Kahvaltı taban ücrete dahildir. Müze girişleri taban ücrete dahildir. Taban ücrete ek zorunlu ücret yoktur. İsteğe bağlı gezi paketi kişi başı 1200 TL'dir. Tarih, müsaitlik, otel adı ve kişisel harcamalar bu örnekte tanımlanmamıştır.",
+      "facts": {
+        "price": {
+          "value": 6900,
+          "evidence": "Kişi başı taban ücret 6900 TL'dir."
+        },
+        "nights": {
+          "value": 2,
+          "evidence": "Programda otelde 2 gece konaklama vardır."
+        },
+        "overnight_bus": {
+          "value": false,
+          "evidence": "Program gece otobüs yolculuğu içermez."
+        },
+        "breakfast": {
+          "value": true,
+          "evidence": "Kahvaltı taban ücrete dahildir."
+        },
+        "museums": {
+          "value": true,
+          "evidence": "Müze girişleri taban ücrete dahildir."
+        },
+        "mandatory_fee": {
+          "value": 0,
+          "evidence": "Taban ücrete ek zorunlu ücret yoktur."
+        },
+        "optional_fee": {
+          "value": 1200,
+          "evidence": "İsteğe bağlı gezi paketi kişi başı 1200 TL'dir."
+        }
+      }
+    },
+    {
+      "id": "T03",
+      "name": "Kapadokya Örnek Tur T03",
+      "destination": "Kapadokya",
+      "departure": "İstanbul",
+      "description": "İstanbul çıkışlı Kapadokya örnek turu. Kişi başı taban ücret 4500 TL'dir. Programda otelde 1 gece konaklama vardır. Program gece otobüs yolculuğu içerir. Müze girişleri taban ücrete dahil değildir. Tarih, müsaitlik, otel adı ve kişisel harcamalar bu örnekte tanımlanmamıştır.",
+      "facts": {
+        "price": {
+          "value": 4500,
+          "evidence": "Kişi başı taban ücret 4500 TL'dir."
+        },
+        "nights": {
+          "value": 1,
+          "evidence": "Programda otelde 1 gece konaklama vardır."
+        },
+        "overnight_bus": {
+          "value": true,
+          "evidence": "Program gece otobüs yolculuğu içerir."
+        },
+        "breakfast": {
+          "value": null,
+          "evidence": ""
+        },
+        "museums": {
+          "value": false,
+          "evidence": "Müze girişleri taban ücrete dahil değildir."
+        },
+        "mandatory_fee": {
+          "value": null,
+          "evidence": ""
+        },
+        "optional_fee": {
+          "value": null,
+          "evidence": ""
+        }
+      }
+    },
+    {
+      "id": "T04",
+      "name": "Kapadokya Örnek Tur T04",
+      "destination": "Kapadokya",
+      "departure": "İstanbul",
+      "description": "İstanbul çıkışlı Kapadokya örnek turu. Kişi başı taban ücret 7600 TL'dir. Programda otelde 3 gece konaklama vardır. Program gece otobüs yolculuğu içermez. Kahvaltı taban ücrete dahil değildir. Taban ücrete ek zorunlu ücret kişi başı 400 TL'dir. Programda ücretli isteğe bağlı gezi paketi yoktur. Tarih, müsaitlik, otel adı ve kişisel harcamalar bu örnekte tanımlanmamıştır.",
+      "facts": {
+        "price": {
+          "value": 7600,
+          "evidence": "Kişi başı taban ücret 7600 TL'dir."
+        },
+        "nights": {
+          "value": 3,
+          "evidence": "Programda otelde 3 gece konaklama vardır."
+        },
+        "overnight_bus": {
+          "value": false,
+          "evidence": "Program gece otobüs yolculuğu içermez."
+        },
+        "breakfast": {
+          "value": false,
+          "evidence": "Kahvaltı taban ücrete dahil değildir."
+        },
+        "museums": {
+          "value": null,
+          "evidence": ""
+        },
+        "mandatory_fee": {
+          "value": 400,
+          "evidence": "Taban ücrete ek zorunlu ücret kişi başı 400 TL'dir."
+        },
+        "optional_fee": {
+          "value": 0,
+          "evidence": "Programda ücretli isteğe bağlı gezi paketi yoktur."
+        }
+      }
+    },
+    {
+      "id": "T05",
+      "name": "Karadeniz Örnek Tur T05",
+      "destination": "Karadeniz",
+      "departure": "Ankara",
+      "description": "Ankara çıkışlı Karadeniz örnek turu. Kişi başı taban ücret 8400 TL'dir. Programda otelde 3 gece konaklama vardır. Program gece otobüs yolculuğu içerir. Kahvaltı taban ücrete dahildir. Müze girişleri taban ücrete dahil değildir. Taban ücrete ek zorunlu ücret kişi başı 700 TL'dir. İsteğe bağlı gezi paketi kişi başı 500 TL'dir. Tarih, müsaitlik, otel adı ve kişisel harcamalar bu örnekte tanımlanmamıştır.",
+      "facts": {
+        "price": {
+          "value": 8400,
+          "evidence": "Kişi başı taban ücret 8400 TL'dir."
+        },
+        "nights": {
+          "value": 3,
+          "evidence": "Programda otelde 3 gece konaklama vardır."
+        },
+        "overnight_bus": {
+          "value": true,
+          "evidence": "Program gece otobüs yolculuğu içerir."
+        },
+        "breakfast": {
+          "value": true,
+          "evidence": "Kahvaltı taban ücrete dahildir."
+        },
+        "museums": {
+          "value": false,
+          "evidence": "Müze girişleri taban ücrete dahil değildir."
+        },
+        "mandatory_fee": {
+          "value": 700,
+          "evidence": "Taban ücrete ek zorunlu ücret kişi başı 700 TL'dir."
+        },
+        "optional_fee": {
+          "value": 500,
+          "evidence": "İsteğe bağlı gezi paketi kişi başı 500 TL'dir."
+        }
+      }
+    },
+    {
+      "id": "T06",
+      "name": "Karadeniz Örnek Tur T06",
+      "destination": "Karadeniz",
+      "departure": "Ankara",
+      "description": "Ankara çıkışlı Karadeniz örnek turu. Kişi başı taban ücret 10500 TL'dir. Programda otelde 4 gece konaklama vardır. Program gece otobüs yolculuğu içermez. Kahvaltı taban ücrete dahildir. Müze girişleri taban ücrete dahildir. Taban ücrete ek zorunlu ücret yoktur. İsteğe bağlı gezi paketi kişi başı 650 TL'dir. Tarih, müsaitlik, otel adı ve kişisel harcamalar bu örnekte tanımlanmamıştır.",
+      "facts": {
+        "price": {
+          "value": 10500,
+          "evidence": "Kişi başı taban ücret 10500 TL'dir."
+        },
+        "nights": {
+          "value": 4,
+          "evidence": "Programda otelde 4 gece konaklama vardır."
+        },
+        "overnight_bus": {
+          "value": false,
+          "evidence": "Program gece otobüs yolculuğu içermez."
+        },
+        "breakfast": {
+          "value": true,
+          "evidence": "Kahvaltı taban ücrete dahildir."
+        },
+        "museums": {
+          "value": true,
+          "evidence": "Müze girişleri taban ücrete dahildir."
+        },
+        "mandatory_fee": {
+          "value": 0,
+          "evidence": "Taban ücrete ek zorunlu ücret yoktur."
+        },
+        "optional_fee": {
+          "value": 650,
+          "evidence": "İsteğe bağlı gezi paketi kişi başı 650 TL'dir."
+        }
+      }
+    },
+    {
+      "id": "T07",
+      "name": "Karadeniz Örnek Tur T07",
+      "destination": "Karadeniz",
+      "departure": "Ankara",
+      "description": "Ankara çıkışlı Karadeniz örnek turu. Kişi başı taban ücret 7200 TL'dir. Programda otelde 2 gece konaklama vardır. Kahvaltı taban ücrete dahildir. Müze girişleri taban ücrete dahil değildir. Taban ücrete ek zorunlu ücret kişi başı 300 TL'dir. Tarih, müsaitlik, otel adı ve kişisel harcamalar bu örnekte tanımlanmamıştır.",
+      "facts": {
+        "price": {
+          "value": 7200,
+          "evidence": "Kişi başı taban ücret 7200 TL'dir."
+        },
+        "nights": {
+          "value": 2,
+          "evidence": "Programda otelde 2 gece konaklama vardır."
+        },
+        "overnight_bus": {
+          "value": null,
+          "evidence": ""
+        },
+        "breakfast": {
+          "value": true,
+          "evidence": "Kahvaltı taban ücrete dahildir."
+        },
+        "museums": {
+          "value": false,
+          "evidence": "Müze girişleri taban ücrete dahil değildir."
+        },
+        "mandatory_fee": {
+          "value": 300,
+          "evidence": "Taban ücrete ek zorunlu ücret kişi başı 300 TL'dir."
+        },
+        "optional_fee": {
+          "value": null,
+          "evidence": ""
+        }
+      }
+    },
+    {
+      "id": "T08",
+      "name": "Karadeniz Örnek Tur T08",
+      "destination": "Karadeniz",
+      "departure": "Ankara",
+      "description": "Ankara çıkışlı Karadeniz örnek turu. Kişi başı taban ücret 9600 TL'dir. Programda otelde 3 gece konaklama vardır. Program gece otobüs yolculuğu içermez. Müze girişleri taban ücrete dahildir. İsteğe bağlı gezi paketi kişi başı 800 TL'dir. Tarih, müsaitlik, otel adı ve kişisel harcamalar bu örnekte tanımlanmamıştır.",
+      "facts": {
+        "price": {
+          "value": 9600,
+          "evidence": "Kişi başı taban ücret 9600 TL'dir."
+        },
+        "nights": {
+          "value": 3,
+          "evidence": "Programda otelde 3 gece konaklama vardır."
+        },
+        "overnight_bus": {
+          "value": false,
+          "evidence": "Program gece otobüs yolculuğu içermez."
+        },
+        "breakfast": {
+          "value": null,
+          "evidence": ""
+        },
+        "museums": {
+          "value": true,
+          "evidence": "Müze girişleri taban ücrete dahildir."
+        },
+        "mandatory_fee": {
+          "value": null,
+          "evidence": ""
+        },
+        "optional_fee": {
+          "value": 800,
+          "evidence": "İsteğe bağlı gezi paketi kişi başı 800 TL'dir."
+        }
+      }
+    },
+    {
+      "id": "T09",
+      "name": "Pamukkale Örnek Tur T09",
+      "destination": "Pamukkale",
+      "departure": "İstanbul",
+      "description": "İstanbul çıkışlı Pamukkale örnek turu. Kişi başı taban ücret 3900 TL'dir. Programda otelde 1 gece konaklama vardır. Program gece otobüs yolculuğu içerir. Kahvaltı taban ücrete dahildir. Müze girişleri taban ücrete dahil değildir. Taban ücrete ek zorunlu ücret kişi başı 500 TL'dir. Programda ücretli isteğe bağlı gezi paketi yoktur. Tarih, müsaitlik, otel adı ve kişisel harcamalar bu örnekte tanımlanmamıştır.",
+      "facts": {
+        "price": {
+          "value": 3900,
+          "evidence": "Kişi başı taban ücret 3900 TL'dir."
+        },
+        "nights": {
+          "value": 1,
+          "evidence": "Programda otelde 1 gece konaklama vardır."
+        },
+        "overnight_bus": {
+          "value": true,
+          "evidence": "Program gece otobüs yolculuğu içerir."
+        },
+        "breakfast": {
+          "value": true,
+          "evidence": "Kahvaltı taban ücrete dahildir."
+        },
+        "museums": {
+          "value": false,
+          "evidence": "Müze girişleri taban ücrete dahil değildir."
+        },
+        "mandatory_fee": {
+          "value": 500,
+          "evidence": "Taban ücrete ek zorunlu ücret kişi başı 500 TL'dir."
+        },
+        "optional_fee": {
+          "value": 0,
+          "evidence": "Programda ücretli isteğe bağlı gezi paketi yoktur."
+        }
+      }
+    },
+    {
+      "id": "T10",
+      "name": "Pamukkale Örnek Tur T10",
+      "destination": "Pamukkale",
+      "departure": "İstanbul",
+      "description": "İstanbul çıkışlı Pamukkale örnek turu. Kişi başı taban ücret 5100 TL'dir. Programda otelde 2 gece konaklama vardır. Program gece otobüs yolculuğu içermez. Kahvaltı taban ücrete dahildir. Müze girişleri taban ücrete dahildir. Taban ücrete ek zorunlu ücret yoktur. Programda ücretli isteğe bağlı gezi paketi yoktur. Tarih, müsaitlik, otel adı ve kişisel harcamalar bu örnekte tanımlanmamıştır.",
+      "facts": {
+        "price": {
+          "value": 5100,
+          "evidence": "Kişi başı taban ücret 5100 TL'dir."
+        },
+        "nights": {
+          "value": 2,
+          "evidence": "Programda otelde 2 gece konaklama vardır."
+        },
+        "overnight_bus": {
+          "value": false,
+          "evidence": "Program gece otobüs yolculuğu içermez."
+        },
+        "breakfast": {
+          "value": true,
+          "evidence": "Kahvaltı taban ücrete dahildir."
+        },
+        "museums": {
+          "value": true,
+          "evidence": "Müze girişleri taban ücrete dahildir."
+        },
+        "mandatory_fee": {
+          "value": 0,
+          "evidence": "Taban ücrete ek zorunlu ücret yoktur."
+        },
+        "optional_fee": {
+          "value": 0,
+          "evidence": "Programda ücretli isteğe bağlı gezi paketi yoktur."
+        }
+      }
+    },
+    {
+      "id": "T11",
+      "name": "Pamukkale Örnek Tur T11",
+      "destination": "Pamukkale",
+      "departure": "İstanbul",
+      "description": "İstanbul çıkışlı Pamukkale örnek turu. Kişi başı taban ücret 4700 TL'dir. Programda otelde 2 gece konaklama vardır. Program gece otobüs yolculuğu içermez. Kahvaltı taban ücrete dahil değildir. Taban ücrete ek zorunlu ücret kişi başı 200 TL'dir. İsteğe bağlı gezi paketi kişi başı 400 TL'dir. Tarih, müsaitlik, otel adı ve kişisel harcamalar bu örnekte tanımlanmamıştır.",
+      "facts": {
+        "price": {
+          "value": 4700,
+          "evidence": "Kişi başı taban ücret 4700 TL'dir."
+        },
+        "nights": {
+          "value": 2,
+          "evidence": "Programda otelde 2 gece konaklama vardır."
+        },
+        "overnight_bus": {
+          "value": false,
+          "evidence": "Program gece otobüs yolculuğu içermez."
+        },
+        "breakfast": {
+          "value": false,
+          "evidence": "Kahvaltı taban ücrete dahil değildir."
+        },
+        "museums": {
+          "value": null,
+          "evidence": ""
+        },
+        "mandatory_fee": {
+          "value": 200,
+          "evidence": "Taban ücrete ek zorunlu ücret kişi başı 200 TL'dir."
+        },
+        "optional_fee": {
+          "value": 400,
+          "evidence": "İsteğe bağlı gezi paketi kişi başı 400 TL'dir."
+        }
+      }
+    },
+    {
+      "id": "T12",
+      "name": "Pamukkale Örnek Tur T12",
+      "destination": "Pamukkale",
+      "departure": "İstanbul",
+      "description": "İstanbul çıkışlı Pamukkale örnek turu. Kişi başı taban ücret 3600 TL'dir. Programda otelde 1 gece konaklama vardır. Müze girişleri taban ücrete dahil değildir. Tarih, müsaitlik, otel adı ve kişisel harcamalar bu örnekte tanımlanmamıştır.",
+      "facts": {
+        "price": {
+          "value": 3600,
+          "evidence": "Kişi başı taban ücret 3600 TL'dir."
+        },
+        "nights": {
+          "value": 1,
+          "evidence": "Programda otelde 1 gece konaklama vardır."
+        },
+        "overnight_bus": {
+          "value": null,
+          "evidence": ""
+        },
+        "breakfast": {
+          "value": null,
+          "evidence": ""
+        },
+        "museums": {
+          "value": false,
+          "evidence": "Müze girişleri taban ücrete dahil değildir."
+        },
+        "mandatory_fee": {
+          "value": null,
+          "evidence": ""
+        },
+        "optional_fee": {
+          "value": null,
+          "evidence": ""
+        }
+      }
+    },
+    {
+      "id": "T13",
+      "name": "Ege Örnek Tur T13",
+      "destination": "Ege",
+      "departure": "İzmir",
+      "description": "İzmir çıkışlı Ege örnek turu. Kişi başı taban ücret 5800 TL'dir. Programda otelde 2 gece konaklama vardır. Program gece otobüs yolculuğu içermez. Kahvaltı taban ücrete dahildir. Müze girişleri taban ücrete dahil değildir. Taban ücrete ek zorunlu ücret kişi başı 350 TL'dir. İsteğe bağlı gezi paketi kişi başı 700 TL'dir. Tarih, müsaitlik, otel adı ve kişisel harcamalar bu örnekte tanımlanmamıştır.",
+      "facts": {
+        "price": {
+          "value": 5800,
+          "evidence": "Kişi başı taban ücret 5800 TL'dir."
+        },
+        "nights": {
+          "value": 2,
+          "evidence": "Programda otelde 2 gece konaklama vardır."
+        },
+        "overnight_bus": {
+          "value": false,
+          "evidence": "Program gece otobüs yolculuğu içermez."
+        },
+        "breakfast": {
+          "value": true,
+          "evidence": "Kahvaltı taban ücrete dahildir."
+        },
+        "museums": {
+          "value": false,
+          "evidence": "Müze girişleri taban ücrete dahil değildir."
+        },
+        "mandatory_fee": {
+          "value": 350,
+          "evidence": "Taban ücrete ek zorunlu ücret kişi başı 350 TL'dir."
+        },
+        "optional_fee": {
+          "value": 700,
+          "evidence": "İsteğe bağlı gezi paketi kişi başı 700 TL'dir."
+        }
+      }
+    },
+    {
+      "id": "T14",
+      "name": "Ege Örnek Tur T14",
+      "destination": "Ege",
+      "departure": "İzmir",
+      "description": "İzmir çıkışlı Ege örnek turu. Kişi başı taban ücret 6900 TL'dir. Programda otelde 3 gece konaklama vardır. Program gece otobüs yolculuğu içermez. Kahvaltı taban ücrete dahildir. Müze girişleri taban ücrete dahildir. Taban ücrete ek zorunlu ücret yoktur. İsteğe bağlı gezi paketi kişi başı 900 TL'dir. Tarih, müsaitlik, otel adı ve kişisel harcamalar bu örnekte tanımlanmamıştır.",
+      "facts": {
+        "price": {
+          "value": 6900,
+          "evidence": "Kişi başı taban ücret 6900 TL'dir."
+        },
+        "nights": {
+          "value": 3,
+          "evidence": "Programda otelde 3 gece konaklama vardır."
+        },
+        "overnight_bus": {
+          "value": false,
+          "evidence": "Program gece otobüs yolculuğu içermez."
+        },
+        "breakfast": {
+          "value": true,
+          "evidence": "Kahvaltı taban ücrete dahildir."
+        },
+        "museums": {
+          "value": true,
+          "evidence": "Müze girişleri taban ücrete dahildir."
+        },
+        "mandatory_fee": {
+          "value": 0,
+          "evidence": "Taban ücrete ek zorunlu ücret yoktur."
+        },
+        "optional_fee": {
+          "value": 900,
+          "evidence": "İsteğe bağlı gezi paketi kişi başı 900 TL'dir."
+        }
+      }
+    },
+    {
+      "id": "T15",
+      "name": "Ege Örnek Tur T15",
+      "destination": "Ege",
+      "departure": "İzmir",
+      "description": "İzmir çıkışlı Ege örnek turu. Kişi başı taban ücret 4300 TL'dir. Programda otelde 1 gece konaklama vardır. Program gece otobüs yolculuğu içerir. Kahvaltı taban ücrete dahil değildir. Müze girişleri taban ücrete dahil değildir. İsteğe bağlı gezi paketi kişi başı 500 TL'dir. Tarih, müsaitlik, otel adı ve kişisel harcamalar bu örnekte tanımlanmamıştır.",
+      "facts": {
+        "price": {
+          "value": 4300,
+          "evidence": "Kişi başı taban ücret 4300 TL'dir."
+        },
+        "nights": {
+          "value": 1,
+          "evidence": "Programda otelde 1 gece konaklama vardır."
+        },
+        "overnight_bus": {
+          "value": true,
+          "evidence": "Program gece otobüs yolculuğu içerir."
+        },
+        "breakfast": {
+          "value": false,
+          "evidence": "Kahvaltı taban ücrete dahil değildir."
+        },
+        "museums": {
+          "value": false,
+          "evidence": "Müze girişleri taban ücrete dahil değildir."
+        },
+        "mandatory_fee": {
+          "value": null,
+          "evidence": ""
+        },
+        "optional_fee": {
+          "value": 500,
+          "evidence": "İsteğe bağlı gezi paketi kişi başı 500 TL'dir."
+        }
+      }
+    },
+    {
+      "id": "T16",
+      "name": "Ege Örnek Tur T16",
+      "destination": "Ege",
+      "departure": "İzmir",
+      "description": "İzmir çıkışlı Ege örnek turu. Kişi başı taban ücret 7500 TL'dir. Programda otelde 3 gece konaklama vardır. Kahvaltı taban ücrete dahildir. Taban ücrete ek zorunlu ücret kişi başı 250 TL'dir. Programda ücretli isteğe bağlı gezi paketi yoktur. Tarih, müsaitlik, otel adı ve kişisel harcamalar bu örnekte tanımlanmamıştır.",
+      "facts": {
+        "price": {
+          "value": 7500,
+          "evidence": "Kişi başı taban ücret 7500 TL'dir."
+        },
+        "nights": {
+          "value": 3,
+          "evidence": "Programda otelde 3 gece konaklama vardır."
+        },
+        "overnight_bus": {
+          "value": null,
+          "evidence": ""
+        },
+        "breakfast": {
+          "value": true,
+          "evidence": "Kahvaltı taban ücrete dahildir."
+        },
+        "museums": {
+          "value": null,
+          "evidence": ""
+        },
+        "mandatory_fee": {
+          "value": 250,
+          "evidence": "Taban ücrete ek zorunlu ücret kişi başı 250 TL'dir."
+        },
+        "optional_fee": {
+          "value": 0,
+          "evidence": "Programda ücretli isteğe bağlı gezi paketi yoktur."
+        }
+      }
+    },
+    {
+      "id": "T17",
+      "name": "Safranbolu Örnek Tur T17",
+      "destination": "Safranbolu",
+      "departure": "Ankara",
+      "description": "Ankara çıkışlı Safranbolu örnek turu. Kişi başı taban ücret 2400 TL'dir. Programda otelde 1 gece konaklama vardır. Program gece otobüs yolculuğu içermez. Kahvaltı taban ücrete dahildir. Müze girişleri taban ücrete dahil değildir. Taban ücrete ek zorunlu ücret kişi başı 100 TL'dir. Programda ücretli isteğe bağlı gezi paketi yoktur. Tarih, müsaitlik, otel adı ve kişisel harcamalar bu örnekte tanımlanmamıştır.",
+      "facts": {
+        "price": {
+          "value": 2400,
+          "evidence": "Kişi başı taban ücret 2400 TL'dir."
+        },
+        "nights": {
+          "value": 1,
+          "evidence": "Programda otelde 1 gece konaklama vardır."
+        },
+        "overnight_bus": {
+          "value": false,
+          "evidence": "Program gece otobüs yolculuğu içermez."
+        },
+        "breakfast": {
+          "value": true,
+          "evidence": "Kahvaltı taban ücrete dahildir."
+        },
+        "museums": {
+          "value": false,
+          "evidence": "Müze girişleri taban ücrete dahil değildir."
+        },
+        "mandatory_fee": {
+          "value": 100,
+          "evidence": "Taban ücrete ek zorunlu ücret kişi başı 100 TL'dir."
+        },
+        "optional_fee": {
+          "value": 0,
+          "evidence": "Programda ücretli isteğe bağlı gezi paketi yoktur."
+        }
+      }
+    },
+    {
+      "id": "T18",
+      "name": "Safranbolu Örnek Tur T18",
+      "destination": "Safranbolu",
+      "departure": "Ankara",
+      "description": "Ankara çıkışlı Safranbolu örnek turu. Kişi başı taban ücret 3200 TL'dir. Programda otelde 2 gece konaklama vardır. Program gece otobüs yolculuğu içermez. Kahvaltı taban ücrete dahildir. Müze girişleri taban ücrete dahildir. Taban ücrete ek zorunlu ücret yoktur. İsteğe bağlı gezi paketi kişi başı 300 TL'dir. Tarih, müsaitlik, otel adı ve kişisel harcamalar bu örnekte tanımlanmamıştır.",
+      "facts": {
+        "price": {
+          "value": 3200,
+          "evidence": "Kişi başı taban ücret 3200 TL'dir."
+        },
+        "nights": {
+          "value": 2,
+          "evidence": "Programda otelde 2 gece konaklama vardır."
+        },
+        "overnight_bus": {
+          "value": false,
+          "evidence": "Program gece otobüs yolculuğu içermez."
+        },
+        "breakfast": {
+          "value": true,
+          "evidence": "Kahvaltı taban ücrete dahildir."
+        },
+        "museums": {
+          "value": true,
+          "evidence": "Müze girişleri taban ücrete dahildir."
+        },
+        "mandatory_fee": {
+          "value": 0,
+          "evidence": "Taban ücrete ek zorunlu ücret yoktur."
+        },
+        "optional_fee": {
+          "value": 300,
+          "evidence": "İsteğe bağlı gezi paketi kişi başı 300 TL'dir."
+        }
+      }
+    },
+    {
+      "id": "T19",
+      "name": "Safranbolu Örnek Tur T19",
+      "destination": "Safranbolu",
+      "departure": "Ankara",
+      "description": "Ankara çıkışlı Safranbolu örnek turu. Kişi başı taban ücret 2100 TL'dir. Programda otelde 1 gece konaklama vardır. Program gece otobüs yolculuğu içerir. Müze girişleri taban ücrete dahil değildir. Taban ücrete ek zorunlu ücret kişi başı 250 TL'dir. Tarih, müsaitlik, otel adı ve kişisel harcamalar bu örnekte tanımlanmamıştır.",
+      "facts": {
+        "price": {
+          "value": 2100,
+          "evidence": "Kişi başı taban ücret 2100 TL'dir."
+        },
+        "nights": {
+          "value": 1,
+          "evidence": "Programda otelde 1 gece konaklama vardır."
+        },
+        "overnight_bus": {
+          "value": true,
+          "evidence": "Program gece otobüs yolculuğu içerir."
+        },
+        "breakfast": {
+          "value": null,
+          "evidence": ""
+        },
+        "museums": {
+          "value": false,
+          "evidence": "Müze girişleri taban ücrete dahil değildir."
+        },
+        "mandatory_fee": {
+          "value": 250,
+          "evidence": "Taban ücrete ek zorunlu ücret kişi başı 250 TL'dir."
+        },
+        "optional_fee": {
+          "value": null,
+          "evidence": ""
+        }
+      }
+    },
+    {
+      "id": "T20",
+      "name": "Safranbolu Örnek Tur T20",
+      "destination": "Safranbolu",
+      "departure": "Ankara",
+      "description": "Ankara çıkışlı Safranbolu örnek turu. Kişi başı taban ücret 2900 TL'dir. Programda otelde 2 gece konaklama vardır. Kahvaltı taban ücrete dahil değildir. İsteğe bağlı gezi paketi kişi başı 150 TL'dir. Tarih, müsaitlik, otel adı ve kişisel harcamalar bu örnekte tanımlanmamıştır.",
+      "facts": {
+        "price": {
+          "value": 2900,
+          "evidence": "Kişi başı taban ücret 2900 TL'dir."
+        },
+        "nights": {
+          "value": 2,
+          "evidence": "Programda otelde 2 gece konaklama vardır."
+        },
+        "overnight_bus": {
+          "value": null,
+          "evidence": ""
+        },
+        "breakfast": {
+          "value": false,
+          "evidence": "Kahvaltı taban ücrete dahil değildir."
+        },
+        "museums": {
+          "value": null,
+          "evidence": ""
+        },
+        "mandatory_fee": {
+          "value": null,
+          "evidence": ""
+        },
+        "optional_fee": {
+          "value": 150,
+          "evidence": "İsteğe bağlı gezi paketi kişi başı 150 TL'dir."
+        }
+      }
+    }
+  ]
+}

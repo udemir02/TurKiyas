@@ -1,0 +1,97 @@
+TurKıyas local-model demonstration
+Catalogue: fictional / synthetic
+Model: qwen3:4b
+
+Siz > T01 ve T02 turlarını fiyat, kahvaltı ve zorunlu ek ücret açısından karşılaştır.
+
+SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.
+
+T01 — Kapadokya Örnek Tur T01 (İstanbul çıkışlı)
+Belirtilen koşullara uygun
+  Taban fiyat: 5.200 TL / kişi
+    [T01:price] Kişi başı taban ücret 5200 TL'dir.
+  Kahvaltı dahil: Evet
+    [T01:breakfast] Kahvaltı taban ücrete dahildir.
+  Zorunlu ek ücret: 600 TL / kişi
+    [T01:mandatory_fee] Taban ücrete ek zorunlu ücret kişi başı 600 TL'dir.
+  Taban + bilinen zorunlu ekler: 5.800 TL / kişi [T01:price + T01:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.
+
+T02 — Kapadokya Örnek Tur T02 (İstanbul çıkışlı)
+Belirtilen koşullara uygun
+  Taban fiyat: 6.900 TL / kişi
+    [T02:price] Kişi başı taban ücret 6900 TL'dir.
+  Kahvaltı dahil: Evet
+    [T02:breakfast] Kahvaltı taban ücrete dahildir.
+  Zorunlu ek ücret: 0 TL / kişi
+    [T02:mandatory_fee] Taban ücrete ek zorunlu ücret yoktur.
+  Taban + bilinen zorunlu ekler: 6.900 TL / kişi [T02:price + T02:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.
+
+Sıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.
+
+Siz > Bütçem 7000 TL; gece otobüs yolculuğu istemiyorum.
+
+SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.
+Etkin koşullar: {"max_price": 7000, "avoid_overnight_bus": true}
+
+T02 — Kapadokya Örnek Tur T02 (İstanbul çıkışlı)
+Belirtilen koşullara uygun
+  Taban fiyat: 6.900 TL / kişi
+    [T02:price] Kişi başı taban ücret 6900 TL'dir.
+  Kahvaltı dahil: Evet
+    [T02:breakfast] Kahvaltı taban ücrete dahildir.
+  Zorunlu ek ücret: 0 TL / kişi
+    [T02:mandatory_fee] Taban ücrete ek zorunlu ücret yoktur.
+  Taban + bilinen zorunlu ekler: 6.900 TL / kişi [T02:price + T02:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.
+
+T01 — Kapadokya Örnek Tur T01 (İstanbul çıkışlı)
+Koşullara uymuyor
+Uymayan alanlar: Gece otobüs yolculuğu
+  Taban fiyat: 5.200 TL / kişi
+    [T01:price] Kişi başı taban ücret 5200 TL'dir.
+  Kahvaltı dahil: Evet
+    [T01:breakfast] Kahvaltı taban ücrete dahildir.
+  Zorunlu ek ücret: 600 TL / kişi
+    [T01:mandatory_fee] Taban ücrete ek zorunlu ücret kişi başı 600 TL'dir.
+  Taban + bilinen zorunlu ekler: 5.800 TL / kişi [T01:price + T01:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.
+
+Sıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.
+
+Siz > Peki müze girişleri dahil mi?
+
+SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.
+Etkin koşullar: {"max_price": 7000, "avoid_overnight_bus": true}
+
+T02 — Kapadokya Örnek Tur T02 (İstanbul çıkışlı)
+Belirtilen koşullara uygun
+  Müze girişleri dahil: Evet
+    [T02:museums] Müze girişleri taban ücrete dahildir.
+  Taban + bilinen zorunlu ekler: 6.900 TL / kişi [T02:price + T02:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.
+
+T01 — Kapadokya Örnek Tur T01 (İstanbul çıkışlı)
+Koşullara uymuyor
+Uymayan alanlar: Gece otobüs yolculuğu
+  Müze girişleri dahil: Hayır
+    [T01:museums] Müze girişleri taban ücrete dahil değildir.
+  Taban + bilinen zorunlu ekler: 5.800 TL / kişi [T01:price + T01:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.
+
+Sıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.
+
+Siz > Bütçe sınırını kaldır.
+
+SENTETİK DEMO: Bu turlar ve fiyatlar kurgusaldır; rezervasyon teklifi değildir.
+Etkin koşullar: {"avoid_overnight_bus": true}
+
+T02 — Kapadokya Örnek Tur T02 (İstanbul çıkışlı)
+Belirtilen koşullara uygun
+  Müze girişleri dahil: Evet
+    [T02:museums] Müze girişleri taban ücrete dahildir.
+  Taban + bilinen zorunlu ekler: 6.900 TL / kişi [T02:price + T02:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.
+
+T01 — Kapadokya Örnek Tur T01 (İstanbul çıkışlı)
+Koşullara uymuyor
+Uymayan alanlar: Gece otobüs yolculuğu
+  Müze girişleri dahil: Hayır
+    [T01:museums] Müze girişleri taban ücrete dahil değildir.
+  Taban + bilinen zorunlu ekler: 5.800 TL / kişi [T01:price + T01:mandatory_fee]. Kişisel/isteğe bağlı harcamalar hariç.
+
+Sıralama: koşullara uygunluk, ardından taban fiyat. Kişisel olarak 'en iyi' tur iddiası değildir.
